@@ -1,4 +1,4 @@
-import { Box,  Heading, Img,Text} from '@chakra-ui/react'
+import { Box,  Heading, Img,Text,Image} from '@chakra-ui/react'
 import React from 'react'
 import cbseimage from "../helpers/cbseimage.png"
 import orchidsimage from "../helpers/orchidsimage.png"
@@ -8,7 +8,7 @@ const Headerbox = () => {
   return (
 
     <Box  my={2} ml={2} mr={2} p={2} mb={0} display="flex" justifyContent={'space-between'} >
-        <Img  
+        <Image
         borderRadius='half'
         boxSize='100px' 
         m={2}
