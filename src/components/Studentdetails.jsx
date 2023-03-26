@@ -1,4 +1,4 @@
-import { Box, Image, Table, TableContainer, Tbody,  Td,  Tr } from '@chakra-ui/react'
+import {  Box, Image, Table, TableContainer, Tbody,  Td,  Tr } from '@chakra-ui/react'
 
 import React from 'react'
 import student_image from "../helpers/student_image.jpg"
@@ -22,20 +22,34 @@ const Studentdetails = () => {
             },
             'Tr Td:nth-child(1)':{
             width:"15%",
+            background: "#e3f6f5"
             
             },
             'Tr Td:nth-child(2)':{
-            width:"30%"
+            width:"30%",
+            background: "#bae8e8"
            },
             'Tr Td:nth-child(3)':{
-            width:"15%"
+            width:"15%",
+            background: "#e3f6f5" 
            },
             'Tr Td:nth-child(4)':{
-            width:"30%"
+            width:"30%",
+            background: "#bae8e8" 
            },
            
            'Tr Td:nth-child(5)':{
-            width:"8%"
+            width:"8%",
+            margin:"0px",
+            backdropFilter: "blur(10px)",
+            background:"#F0F0F0"
+            
+            
+           },
+           'Td Image':{
+            margin:"0px",
+            padding:"0px",
+            width:'auto'
            }
        
         }}
@@ -48,11 +62,27 @@ const Studentdetails = () => {
                     <Td>AMISHA PATEL</Td>
                     <Td>ERP CODE</Td>
                     <Td>20220001384_K12</Td>
-                    <Td rowSpan={4}><Image  src={student_image} alt='StudentImg'
-                     borderRadius='half' 
-                     boxSize={'150px'}
-                     
-                     /></Td>
+                    <Td rowSpan={4}>
+                        <Box 
+                        textAlign={'center'}
+                        >
+                        <span size={{base:'4xs',xl:'md',lg:'md',md:'sm',sm:'2xs'}} >Photo</span>
+                            <Image  src={student_image} alt='StudentImg'
+                               boxSize='100px'
+                               objectFit='cover'
+                               border={"1px solid black"}
+                               borderRadius="0.1rem"
+                               p={0}
+                               mt={1}
+                               
+                            />
+
+
+                        </Box>
+                            
+                        
+                    
+                    </Td>
                     
                 </Tr>
                 <Tr >

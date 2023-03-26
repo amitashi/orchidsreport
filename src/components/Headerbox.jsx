@@ -15,7 +15,7 @@ const Headerbox = () => {
 
         src={cbseimage} alt="CBSE_IMAGE" />
         <Box my={1} display={"flex"} justifyContent="space-between" alignContent={"center"} flexDirection={"column"} textAlign={'center'}>
-            <Box my={1}>
+            <Box my={1} color={"#080000"}>
                 <Heading  as='h3' size={{base:'4xs',xl:'md',lg:'md',md:'sm',sm:'2xs'}} >CBSE AFFILIATION NO: 1130670</Heading>
                 <Text  fontSize={{base:'3xs',xl:'md',lg:'md',md:'sm',sm:'2xs'}} >Marve Road, Behind Garden court Restaurent, Orlem, Malad West, Mumbai, Maharastra 400064</Text>
             </Box>
