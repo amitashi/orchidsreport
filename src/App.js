@@ -3,7 +3,9 @@ import { Box, Button,  ChakraProvider } from '@chakra-ui/react'
 import Headerbox from "./components/Headerbox"
 import Studentdetails from './components/Studentdetails'
 import Remarkstable from './components/Remarkstable'
-import { click } from '@testing-library/user-event/dist/click'
+import Scoretable3 from './components/Scoretable3'
+import Gradestable from './components/Gradestable'
+import Scoretable1 from './components/Scoretable1'
 
 const App = () => {
   const [state,setstate] = useState(false);
@@ -24,6 +26,9 @@ const App = () => {
      {state? <Box bg={"#fffafa"}>
         <Headerbox/>
         <Studentdetails/>
+        <Scoretable1/>
+        <Scoretable3/>
+        <Gradestable/>
         <Remarkstable/>
         
       </Box> :<Box

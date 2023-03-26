@@ -59,7 +59,7 @@ const Studentdetails = () => {
             >
                 <Tr >
                     <Td >STUDENT'S NAME</Td>
-                    <Td>AMISHA PATEL</Td>
+                    <Td>ANSH KUMAR</Td>
                     <Td>ERP CODE</Td>
                     <Td>20220001384_K12</Td>
                     <Td rowSpan={4}>

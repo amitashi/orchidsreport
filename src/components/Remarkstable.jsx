@@ -38,7 +38,7 @@ const Remarkstable = () => {
                     {data.map((item)=>(
                         <Tr key={item.id}>
                             <Td >{item.title}</Td>
-                            <Td h={4} wordWrap={'brea-word'} whiteSpace='normal' >{item.title=="PRINCIPAL"?<Box>
+                            <Td h={4} wordWrap={'brea-word'} whiteSpace='normal' >{item.title==="PRINCIPAL"?<Box>
                             <Image
                            height={20}
                            objectFit='cover'
