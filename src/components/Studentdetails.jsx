@@ -6,7 +6,7 @@ import student_image from "../helpers/student_image.jpg"
 
 const Studentdetails = () => {
   return (
-    <Box ml={4} mr={4}>
+    <Box ml={4} mr={4} size={{base:'4xs',xl:'md',lg:'md',md:'xs',sm:'5xs'}}>
     <TableContainer  m={2} border={"1px solid black"}  whiteSpace={"normal"} >
         <Table  
         align='center'
