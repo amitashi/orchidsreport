@@ -69,7 +69,12 @@ const App = () => {
             >
           Generate Report
           </Button >:<Button colorScheme='blue' variant='solid' onClick={clickhandler} 
-          _hover={{bg:'red.600', transform:"scale(1.05)", variant:'outline'}}
+          _hover={{bg:'red.600', transform:"scale(1.05)" , variant:'outline'}}
+          _active={{
+            bg: '#dddfe2',
+            transform: 'scale(0.98)',
+            borderColor: '#bec3c9',
+          }}
           >Generate Report</Button>}
             
         </Box>}
