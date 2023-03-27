@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Button,  ChakraProvider } from '@chakra-ui/react'
+import { Box, Button,  ChakraProvider} from '@chakra-ui/react'
 import Headerbox from "./components/Headerbox"
 import Studentdetails from './components/Studentdetails'
 import Remarkstable from './components/Remarkstable'
@@ -30,6 +30,20 @@ const App = () => {
         <Scoretable3/>
         <Gradestable/>
         <Remarkstable/>
+        <Box m={4} 
+        justifyContent={'center'}
+        alignContent="center"
+        display={'flex'}
+        >
+          <Button 
+          colorScheme='teal' variant='solid'
+          onClick={()=>setstate(false)}
+          >
+            Back
+          </Button>
+        
+        </Box>
+        
         
       </Box> :<Box
             bgGradient="linear(to-t, green.200, blue.500)"
