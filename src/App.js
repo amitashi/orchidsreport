@@ -38,6 +38,8 @@ const App = () => {
           <Button 
           colorScheme='teal' variant='solid'
           onClick={()=>setstate(false)}
+          _hover={{bg:'red.600', transform:"scale(1.05)", variant:'outline'}}
+          _active={{bg:"blue.500",transform:"scale(1.09)"}}
           >
             Back
           </Button>
@@ -66,7 +68,9 @@ const App = () => {
               spinnerPlacement='start'
             >
           Generate Report
-          </Button >:<Button colorScheme='blue' variant='solid' onClick={clickhandler}  >Generate Report</Button>}
+          </Button >:<Button colorScheme='blue' variant='solid' onClick={clickhandler} 
+          _hover={{bg:'red.600', transform:"scale(1.05)", variant:'outline'}}
+          >Generate Report</Button>}
             
         </Box>}
 
