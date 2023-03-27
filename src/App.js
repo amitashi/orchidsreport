@@ -6,6 +6,8 @@ import Remarkstable from './components/Remarkstable'
 import Scoretable3 from './components/Scoretable3'
 import Gradestable from './components/Gradestable'
 import Scoretable1 from './components/Scoretable1'
+import Home from './components/Home'
+
 
 const App = () => {
   const [state,setstate] = useState(false);
@@ -37,47 +39,19 @@ const App = () => {
         >
           <Button 
           colorScheme='teal' variant='solid'
+          
           onClick={()=>setstate(false)}
+          boxShadow='dark-lg'
           _hover={{bg:'red.600', transform:"scale(1.05)", variant:'outline'}}
           _active={{bg:"blue.500",transform:"scale(1.09)"}}
           >
-            Back
+            Go Back
           </Button>
         
         </Box>
         
         
-      </Box> :<Box
-            bgGradient="linear(to-t, green.200, blue.500)"
-
-            backgroundPosition="center"
-            backgroundRepeat="no-repeat"
-          alignContent={'center'}
-          width='100vw'
-          height={'100vh'}
-          display='flex'
-          alignItems={'center'}
-          justifyContent={'center'}
-      >
-            {loader?<Button
-
-              isLoading
-              loadingText='Loading'
-              colorScheme='blue'
-              variant='outline'
-              spinnerPlacement='start'
-            >
-          Generate Report
-          </Button >:<Button colorScheme='blue' variant='solid' onClick={clickhandler} 
-          _hover={{bg:'red.600', transform:"scale(1.05)" , variant:'outline'}}
-          _active={{
-            bg: '#dddfe2',
-            transform: 'scale(0.98)',
-            borderColor: '#bec3c9',
-          }}
-          >Generate Report</Button>}
-            
-        </Box>}
+      </Box> : <Home loader={loader} clickhandler={clickhandler} />}
 
     </ChakraProvider>
     
