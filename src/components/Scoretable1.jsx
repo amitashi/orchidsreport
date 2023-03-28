@@ -1,4 +1,4 @@
-import { Box, Table,TableCaption, TableContainer, Tbody,Th,Thead,Td,  Tr,Text, Heading} from '@chakra-ui/react'
+import { Box, Table,TableCaption, TableContainer, Tbody,Th,Thead,Td,  Tr, Heading} from '@chakra-ui/react'
 import React from 'react'
 
 const Scoretable1 = () => {
@@ -40,7 +40,6 @@ const Scoretable1 = () => {
           >
             <TableCaption borderColor={'#080000' } border={"0.5px solid"} mt={0} textAlign={'left'} >Grading System-1: A1:(91%-100%),A2:(81%-90%),B1:(71%-80%),B2:(61%-70%),C1:(51%-60%),C2:(41%-50%),
               D:(34%-40%),C1:(Less than equal to 33%)</TableCaption>
-              <TableCaption borderColor={'#080000' } border={"0.5px solid"} mt={0} textAlign={'left'} >FA 1- Home Engagement, FA2 - Class Engagement, FA3 - All Assesment tests, SA - Summative Assestment</TableCaption>
             <Thead>
               <Tr>
                 <Th colSpan={1}>

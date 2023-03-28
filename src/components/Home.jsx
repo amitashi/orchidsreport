@@ -1,14 +1,18 @@
 import { Box, Button, Heading } from '@chakra-ui/react'
-import React from 'react'
+import React, { useState } from 'react'
+import Form from './Form'
 import Navbar from './Navbar'
 
-const Home = ({loader,clickhandler}) => {
+const Home = ({loader,clickhandler,loggedin,setloggedin}) => {
+ 
   return (
     <>
     <Box m={'0.5px'}
-    position='relative'
+    pos="fixed" w="100%" zIndex={2}
+    mt={'0px'}
+    border={'1px black'}
     >
-                <Navbar/>
+                <Navbar loggedin={loggedin} setloggedin={setloggedin}/>
                 </Box>
     <Box
             bgGradient="linear(to-t, green.200, blue.500)"
@@ -32,7 +36,7 @@ const Home = ({loader,clickhandler}) => {
                 alignItems={'center'}
                 color={"#080000"}
                 _hover={{transform:'scale(1.01)', fontStyle:'italic', color:'blue.700'}}
-                mb={20}
+                mb={0}
             >
                 <Heading colorScheme={'teal'}
                 fontStyle={'italic'}
@@ -43,11 +47,15 @@ const Home = ({loader,clickhandler}) => {
                 <br></br>
                 <Heading
                     
-                >ORCHIDS: THE INTERNATIONAL SCHOOL</Heading>
+                >ORCHIDS: THE INTERNATIONAL SCHOOL</Heading><br></br>
+                <i>Please login to generate the Report Card...</i>
                 <br></br>
             </Box>
         
-        
+        <Box>
+          
+          <Form loggedin={loggedin} setloggedin={setloggedin} />
+        </Box>
             {loader?<Button
 
               isLoading
@@ -59,6 +67,8 @@ const Home = ({loader,clickhandler}) => {
             >
             Opening Report
             </Button >:<Button colorScheme='blue' variant='solid' onClick={clickhandler} 
+                display={loggedin?"":'none'}
+                m={10}
                 _hover={{bg:'red.600', transform:"scale(1.05)" , variant:'outline'}}
                 _active={{
                     bg: '#dddfe2',

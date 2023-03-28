@@ -12,6 +12,7 @@ import Home from './components/Home'
 const App = () => {
   const [state,setstate] = useState(false);
   const [loader,setloader] = useState(false);
+  const [loggedin,setloggedin] = useState(false)
   const clickhandler = ()=>{
     setloader(true);
     setTimeout(()=>{setstate(true)
@@ -51,7 +52,7 @@ const App = () => {
         </Box>
         
         
-      </Box> : <Home loader={loader} clickhandler={clickhandler} />}
+      </Box> : <Home loggedin={loggedin} setloggedin={setloggedin} loader={loader} clickhandler={clickhandler} />}
 
     </ChakraProvider>
     

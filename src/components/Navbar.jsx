@@ -1,10 +1,14 @@
-import { HStack,Text } from '@chakra-ui/react'
+import { Button, HStack,Text } from '@chakra-ui/react'
 import React from 'react'
 
-const Navbar = () => {
+const Navbar = ({loggedin,setloggedin}) => {
+  const clickhandler=()=>{
+    setloggedin(false);
+  }
   return (
     <HStack
-        position={'sticky'}
+        
+        position={'relative'}
         display={'flex'}
         fontSize={'2xl'}
         justifyContent={'space-evenly'}
@@ -27,11 +31,22 @@ const Navbar = () => {
         
     
     >
-        <Text >Home</Text>
-        <Text >Our Schools</Text>
-        <Text >About us</Text>
-        <Text >Careers</Text>
-        <Text> Contact Us</Text>
+        <Text borderRadius={8}  _hover={{bg:'gray.200', color:'red.300', transform:"scale(1.02)" , variant:'outline'}}>Home</Text>
+        <Text borderRadius={8}  _hover={{bg:'gray.200', color:'red.300', transform:"scale(1.02)" , variant:'outline'}}>Our Schools</Text>
+        <Text borderRadius={8}  _hover={{bg:'gray.200', color:'red.300', transform:"scale(1.02)" , variant:'outline'}}>About us</Text>
+        <Text borderRadius={8}  _hover={{bg:'gray.200', color:'red.300', transform:"scale(1.02)" , variant:'outline'}}>Careers</Text>
+        <Text borderRadius={8}  _hover={{bg:'gray.200', color:'red.300', transform:"scale(1.02)" , variant:'outline'}} > Contact Us</Text>
+        <Button colorScheme='blue' variant='solid' onClick={clickhandler} 
+                size={'sm'}
+                display={loggedin?"":'none'}
+                _hover={{bg:'gray.700', color:'red.300', transform:"scale(1.02)" , variant:'outline'}}
+                _active={{
+                    bg: '#dddfe2',
+                    transform: 'scale(0.98)',
+                    borderColor: '#bec3c9',
+                }}
+                boxShadow='sm'
+            >Log Out</Button>
     </HStack>
   )
 }
